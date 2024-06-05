@@ -195,26 +195,28 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Are you over the age of 64?  ");
+  const [quiz, setQuiz] = useState("Selecciona tu edad");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes,setYes]=useState("YES, I'M 65 OR OLDER")
-  const [no,setNo]=useState("NO, I'M 64 OR YOUNGER")
+  const [yes,setYes]=useState("80+")
+  const [no,setNo]=useState("55-80")
+  const [count, setCount] = useState("");
+  const [text, setText] = useState("");
   
 
   const stepProcess = () => {
-    if (step === "Reviewing Your Answers...") {
+    if (step === "Revisar las respuestas") {
       setTimeout(() => {
-        setStep("Matching With Best Options...");
+        setStep("Buscar plazas disponibles");
       }, 1500);
     }
-    if (step === "Matching With Best Options...") {
+    if (step === "Buscar plazas disponibles") {
       setTimeout(() => {
-        setStep("Confirming Eligibility...");
+        setStep("Confirmación de elegibilidad");
       }, 1500);
     }
-    if (step === "Confirming Eligibility...") {
+    if (step === "Confirmación de elegibilidad") {
       setTimeout(() => {
         setStep("completed");
 
@@ -266,12 +268,14 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Are you over the age of 64?  ") {
-      setYes("Yes")
-      setNo("No")
-      setQuiz("2. Do you live in the United States?");
+    if (quiz === "Selecciona tu edad") {
+      setYes("Hijo/Hijos")
+      setNo("Cónyuge")
+      setQuiz("¿Quién es su beneficiario?");
+      setCount("Miembro de la familia")
+      setText("Otro")
     } else {
-      setStep("Reviewing Your Answers...");
+      setStep("Revisar las respuestas");
      
       topScroll("top");
     }
@@ -304,9 +308,9 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setYes("Yes")
       setNo("No")
-      setQuiz("2. Do you live in the United States?");
+      setQuiz("¿Quién es su beneficiario?");
     } else {
-      setStep("Reviewing Your Answers...");
+      setStep("Revisar las respuestas");
     
       topScroll("top");
     }
@@ -336,7 +340,7 @@ export default function Fifth_SP() {
 
   return (
     <div>
-     <ToastContainer />
+     {/* <ToastContainer /> */}
       <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
       Senior's Allowance Program 2024
       </div>
@@ -371,6 +375,12 @@ export default function Fifth_SP() {
                 <div className="answer-btn-5" onClick={handleQuizN}>
               {no}
                 </div>
+              {quiz ==="¿Quién es su beneficiario?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
+              {count}
+                </div>}
+                {quiz ==="¿Quién es su beneficiario?" && <div className="answer-btn-5" onClick={handleQuizP}>
+              {text}
+                </div>}
               </div>
             </div>
           </div>
@@ -381,21 +391,24 @@ export default function Fifth_SP() {
         </div>
       ) : (
         <div className="checking">
-          <div className="congrats">Congratulation, You Qualify!</div>
+          <div className="congrats">Felicidades ¡Ya está precalificado!</div>
           <div className="top-description-5">
-            Make A <b>Quick Call</b> To Claim Your Grocery Allowance!
+          Está precalificado para recibir su prestación funeraria de $25,000
           </div>
-          <div className="spots-count">Spots remaining: 4</div>
-          <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
+          <div className="top-description-5">
+          <b>Llámanos ahora </b> para asegurar su prestación de $25,000.
+          </div>
+          <div className="spots-count">Puestos restantes: 4</div>
+          {/* <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div> */}
           <a href="tel:+18446720874">
             <div className="call-btn" onClick={handleCall}>
-            CALL (844) 672-0874
+            Llama al (844) 672-0874
             </div>
           </a>
-          <div className="sub-title">We Have Reserved Your Spot</div>
+          {/* <div className="sub-title">We Have Reserved Your Spot</div> */}
           <div className="sub-description">
-            Due to high call volume, your official agent is waiting for only{" "}
-            <b>3 minutes</b>, then your spot will not be reserved.
+          NOTA: Debido al alto volumen de llamadas, 
+          tu línea directa permanecerá disponible por los siguientes:
           </div>
           <div className="timer">
             <div className="timer-cell">{min}</div>
@@ -411,7 +424,7 @@ export default function Fifth_SP() {
         </div>
         {/* <p>{zipCode} </p> */}
       </div>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-right"
         autoClose={5000}
         newestOnTop={false}
@@ -420,7 +433,7 @@ export default function Fifth_SP() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </div>
   );
 }
