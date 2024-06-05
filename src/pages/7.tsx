@@ -356,15 +356,15 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-              Americans over 65 years old can claim the 2024 Grocery Allowance Card that gives them up to $3600. Americans can use the funds to fully cover their Groceries, Medicines, etc. at Walmart and thousands of other participating stores!
+              Realice este cuestionario de 60 segundos para saber a cuánto puede tener derecho.
 
-              </div>
-              <div className="main-des-5"  style={{marginTop:'-5px'}}>
+              </div> 
+              {/* <div className="main-des-5"  style={{marginTop:'-5px'}}>
               If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $3,600 Grocery Allowance mailed to you within a few days ready for use!</b>
-              </div>
+              </div>  */}
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
-            <div style={{marginTop:'-5px'}} className="survey">
+            <div style={{marginTop:'15px'}} className="survey">
               <div className="quiz-5" id="btn">
                 {quiz}
               </div>
