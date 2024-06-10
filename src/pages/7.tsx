@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect } from "react";
 //@ts-ignore
 import TagManager from "react-gtm-module";
 import axios from "axios";
@@ -400,9 +400,9 @@ export default function Fifth_SP() {
           </div>
           <div className="spots-count">Puestos restantes: 4</div>
           {/* <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div> */}
-          <a href="tel:+18446720874">
+          <a href="tel:+13214858035">
             <div className="call-btn" onClick={handleCall}>
-            Llama al (844) 672-0874
+         CALL (321) 485-8035
             </div>
           </a>
           {/* <div className="sub-title">We Have Reserved Your Spot</div> */}
