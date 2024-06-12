@@ -391,14 +391,14 @@ export default function Fifth_SP() {
         </div>
       ) : (
         <div className="checking">
-          <div className="congrats">Felicidades ¡Ya está precalificado!</div>
+          <div className="congrats">Congratulations! You are prequalified!</div>
           <div className="top-description-5">
-          Está precalificado para recibir su prestación funeraria de $25,000
+         You are prequalified to receive your $25,000 funeral benefit.
           </div>
           <div className="top-description-5">
-          <b>Llámanos ahora </b> para asegurar su prestación de $25,000.
+        <b>Call us now</b> to secure your $25,000 benefit."
           </div>
-          <div className="spots-count">Puestos restantes: 4</div>
+          <div className="spots-count">Spot Remaining: 4</div>
           {/* <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div> */}
           <a href="tel:+13214858035">
             <div className="call-btn" onClick={handleCall}>
@@ -407,8 +407,7 @@ export default function Fifth_SP() {
           </a>
           {/* <div className="sub-title">We Have Reserved Your Spot</div> */}
           <div className="sub-description">
-          NOTA: Debido al alto volumen de llamadas, 
-          tu línea directa permanecerá disponible por los siguientes:
+       Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
           </div>
           <div className="timer">
             <div className="timer-cell">{min}</div>
