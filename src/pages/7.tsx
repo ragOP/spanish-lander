@@ -195,7 +195,7 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Selecciona tu edad");
+  const [quiz, setQuiz] = useState("Select your age");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -268,10 +268,10 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Selecciona tu edad") {
+    if (quiz === "Select your age") {
       setYes("Hijo/Hijos")
       setNo("Cónyuge")
-      setQuiz("¿Quién es su beneficiario?");
+      setQuiz("Who is your beneficiary?");
       setCount("Miembro de la familia")
       setText("Otro")
     } else {
@@ -308,7 +308,7 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setYes("Yes")
       setNo("No")
-      setQuiz("¿Quién es su beneficiario?");
+      setQuiz("Who is your beneficiary?");
     } else {
       setStep("Revisar las respuestas");
     
@@ -350,13 +350,13 @@ export default function Fifth_SP() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-                Averigua Si Reúnes Los Requisitos Para Este Plan De Entierro De $25,000 En Efectivo Para Mayores
+             Find Out If You Qualify For This $25,000 Cash Burial Plan For Seniors
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-              Realice este cuestionario de 60 segundos para saber a cuánto puede tener derecho.
+           Take this 60-second quiz to find out how much you may qualify for.
 
               </div> 
               {/* <div className="main-des-5"  style={{marginTop:'-5px'}}>
@@ -375,10 +375,10 @@ export default function Fifth_SP() {
                 <div className="answer-btn-5" onClick={handleQuizN}>
               {no}
                 </div>
-              {quiz ==="¿Quién es su beneficiario?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
+              {quiz ==="Who is your beneficiary?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
               {count}
                 </div>}
-                {quiz ==="¿Quién es su beneficiario?" && <div className="answer-btn-5" onClick={handleQuizP}>
+                {quiz ==="Who is your beneficiary?" && <div className="answer-btn-5" onClick={handleQuizP}>
               {text}
                 </div>}
               </div>
