@@ -208,15 +208,15 @@ export default function Fifth_SP() {
   const stepProcess = () => {
     if (step === "Review the answers") {
       setTimeout(() => {
-        setStep("Buscar plazas disponibles");
+        setStep("Search for available spots");
       }, 1500);
     }
-    if (step === "Buscar plazas disponibles") {
+    if (step === "Search for available spots") {
       setTimeout(() => {
-        setStep("Confirmación de elegibilidad");
+        setStep("Eligibility confirmation");
       }, 1500);
     }
-    if (step === "Confirmación de elegibilidad") {
+    if (step === "Eligibility confirmation") {
       setTimeout(() => {
         setStep("completed");
 
