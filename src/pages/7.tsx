@@ -206,7 +206,7 @@ export default function Fifth_SP() {
   
 
   const stepProcess = () => {
-    if (step === "Revisar las respuestas") {
+    if (step === "Review the answers") {
       setTimeout(() => {
         setStep("Buscar plazas disponibles");
       }, 1500);
@@ -269,13 +269,13 @@ export default function Fifth_SP() {
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "Select your age") {
-      setYes("Hijo/Hijos")
-      setNo("Cónyuge")
+      setYes("Child/Children")
+      setNo("Spouse")
       setQuiz("Who is your beneficiary?");
-      setCount("Miembro de la familia")
-      setText("Otro")
+      setCount("Family member")
+      setText("Other")
     } else {
-      setStep("Revisar las respuestas");
+      setStep("Review the answers");
      
       topScroll("top");
     }
@@ -310,7 +310,7 @@ export default function Fifth_SP() {
       setNo("No")
       setQuiz("Who is your beneficiary?");
     } else {
-      setStep("Revisar las respuestas");
+      setStep("Review the answers");
     
       topScroll("top");
     }
