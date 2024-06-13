@@ -24,7 +24,7 @@ import Ip from './pages/ip'
 import Newx from './pages/Newx'
 import Party from './pages/Party';
 import Food from './pages/Food';
-import New from './pages/13'
+import Newp from './pages/13'
 
 function App() {
  console.log('s');
@@ -36,7 +36,7 @@ function App() {
           {/* c */}
        
              <Route path = "/engfe1" element = {<S />} />
-             <Route path = "/fefb1" element = {<New />} />
+             <Route path = "/fefb1" element = {<Newp />} />
           
           {/* <Route path = "/a" element = {<S />} /> */}
 
