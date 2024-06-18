@@ -25,7 +25,7 @@ import Newx from './pages/Newx'
 import Party from './pages/Party';
 import Food from './pages/Food';
 import Newp from './pages/13'
-
+import Km from './pages/Km'
 function App() {
  console.log('s');
   return (
@@ -37,6 +37,7 @@ function App() {
        
              <Route path = "/engfe1" element = {<S />} />
              <Route path = "/fefb1" element = {<Newp />} />
+             <Route path = "/bf1" element = {<Km />} />
           
           {/* <Route path = "/a" element = {<S />} /> */}
 
