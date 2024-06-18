@@ -201,6 +201,7 @@ export default function Fifth_SP() {
   const [second, setSecond] = useState<any>(0);
   const [yes,setYes]=useState("80+")
   const [no,setNo]=useState("55-80")
+  const [third,setThird]=useState("40-54")
   const [count, setCount] = useState("");
   const [text, setText] = useState("");
   
@@ -372,8 +373,11 @@ export default function Fifth_SP() {
                 <div className="answer-btn-5" onClick={handleQuizP}>
               {yes}
                 </div>
-                <div className="answer-btn-5" onClick={handleQuizN}>
+                <div className="answer-btn-5" onClick={handleQuizP}>
               {no}
+                </div>
+                <div className="answer-btn-5" onClick={handleQuizP}>
+              {third}
                 </div>
               {quiz ==="Who is your beneficiary?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
               {count}
