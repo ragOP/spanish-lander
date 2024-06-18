@@ -376,9 +376,9 @@ export default function Fifth_SP() {
                 <div className="answer-btn-5" onClick={handleQuizP}>
               {no}
                 </div>
-                <div className="answer-btn-5" onClick={handleQuizP}>
+              { quiz !=="Who is your beneficiary?" && <div className="answer-btn-5" onClick={handleQuizP}>
               {third}
-                </div>
+                </div>}
               {quiz ==="Who is your beneficiary?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
               {count}
                 </div>}
