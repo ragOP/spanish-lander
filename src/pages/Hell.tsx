@@ -400,9 +400,9 @@ export default function Fifth_SP() {
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
           {/* <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div> */}
-          <a href="tel:+13214858035">
+          <a href="tel:+18336117373">
             <div className="call-btn" onClick={handleCall}>
-         CALL (321) 485-8035
+            CALL (833) 611-7373
             </div>
           </a>
           {/* <div className="sub-title">We Have Reserved Your Spot</div> */}
