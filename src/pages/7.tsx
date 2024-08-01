@@ -391,9 +391,9 @@ export default function Fifth_SP() {
         </div>
       ) : (
         <div className="checking">
-          <div className="congrats">Congratulations! You are prequalified!</div>
+          <div className="congrats">Congratulations, You Qualify!</div>
           <div>
-         You are prequalified to receive your $25,000 funeral benefit.
+
           </div>
           <div className="top-description-5">
         <b>Call us now</b> to secure your $25,000 benefit.
