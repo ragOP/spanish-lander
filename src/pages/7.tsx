@@ -200,7 +200,7 @@ export default function Fifth_SP() {
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
   const [yes,setYes]=useState("80+")
-  const [no,setNo]=useState("55-80")
+  const [no,setNo]=useState("45-80")
   const [count, setCount] = useState("");
   const [text, setText] = useState("");
   
