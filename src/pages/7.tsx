@@ -199,7 +199,7 @@ export default function Fifth_SP() {
       {step === "process" ? (
         <>
           <div className="main-container-5">
-            <div className="main-descrition-5-5">
+            <div className="main-descrition-5-5"> 
               <div className="main-des-title-6-7">
                 <b>
                   Are You Qualified For This New Funeral & Burial Coverage Program For American Seniors?
@@ -207,7 +207,7 @@ export default function Fifth_SP() {
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
-              <div style={{ marginTop: '14px' }} className="main-des-5">
+              <div style={{ marginTop: '14px',marginLeft:'20px' }} className="main-des-5">
                 Answer 3 simple questions below to check eligibility
               </div> 
             </div>
@@ -239,7 +239,7 @@ export default function Fifth_SP() {
           <div className="spots-count">Spot Remaining: 4</div>
           <a href="tel:+13214858035">
             <div className="call-btn" onClick={handleCall}>
-              CALL (321) 485-8035
+              CALL (321) 485-8035 | TTY 711
             </div>
           </a>
           <div className="sub-description">
