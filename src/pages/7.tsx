@@ -356,7 +356,7 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-          Answer 2 simple questions below to 
+          Answer 2 simple questions below to check eligibility
 
               </div> 
               {/* <div className="main-des-5"  style={{marginTop:'-5px'}}>
