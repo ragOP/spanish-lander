@@ -350,13 +350,13 @@ export default function Fifth_SP() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-             Find Out If You Qualify For This $25,000 Cash Burial Plan For Seniors
+       Are You Qualified For This New Funeral & Burial Coverage Program For American Seniors?
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-           Take this 60-second quiz to find out how much you may qualify for.
+          Answer 2 simple questions below to 
 
               </div> 
               {/* <div className="main-des-5"  style={{marginTop:'-5px'}}>
