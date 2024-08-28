@@ -195,7 +195,7 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Select your age");
+  const [quiz, setQuiz] = useState("Are you over 50?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -268,10 +268,10 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Select your age") {
+    if (quiz === "Are you over 50?") {
       setYes("Child/Children")
       setNo("Spouse")
-      setQuiz("Who is your beneficiary?");
+      setQuiz("Do You Live in the USA?");
       setCount("Family member")
       setText("Other")
     } else {
@@ -308,7 +308,7 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setYes("Yes")
       setNo("No")
-      setQuiz("Who is your beneficiary?");
+      setQuiz("Do You Live in the USA?");
     } else {
       setStep("Review the answers");
     
@@ -375,10 +375,10 @@ export default function Fifth_SP() {
                 <div className="answer-btn-5" onClick={handleQuizN}>
               {no}
                 </div>
-              {quiz ==="Who is your beneficiary?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
+              {quiz ==="Do You Live in the USA?" &&  <div className="answer-btn-5" onClick={handleQuizP}>
               {count}
                 </div>}
-                {quiz ==="Who is your beneficiary?" && <div className="answer-btn-5" onClick={handleQuizP}>
+                {quiz ==="Do You Live in the USA?" && <div className="answer-btn-5" onClick={handleQuizP}>
               {text}
                 </div>}
               </div>
