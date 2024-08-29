@@ -11,11 +11,11 @@ import Head_bg from "../assets/share.png";
 import Headline from "../assets/headline_spandeb1.png";
 
 // google tag manager
-const tagManagerArgs = {
-  gtmId: "GTM-KZJBC3B",
-};
+// const tagManagerArgs = {
+//   gtmId: "GTM-KZJBC3B",
+// };
 
-TagManager.initialize(tagManagerArgs);
+// TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
 
