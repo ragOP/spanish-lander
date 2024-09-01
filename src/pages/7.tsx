@@ -207,15 +207,16 @@ export default function Fifth_SP() {
               </div> */}
 
 
-              <div className="main-des-title-6-7">
+            <div className="main-des-title-6-7">
   <b>
-    Americans Over 50 Can Now Qualify For 
-    <span style="background-color: yellow;">
+    Americans Over 50 Can Now Qualify For{" "}
+    <span style={{ backgroundColor: "yellow" }}>
       The $25,000 Burial Coverage Benefit
-    </span>
+    </span>{" "}
     in 2024!
   </b>
 </div>
+
 
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
