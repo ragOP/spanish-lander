@@ -119,7 +119,7 @@ export default function Fifth_SP() {
 
   };
 
-  const [quiz, setQuiz] = useState("Are you over 50?");
+  const [quiz, setQuiz] = useState("1. Are you over 50?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -168,9 +168,9 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Are you over 50?") {
-      setQuiz("Do You Live in the USA?");
-    } else if (quiz === "Do You Live in the USA?") {
+    if (quiz === "1. Are you over 50?") {
+      setQuiz("2. Do You Live in the USA?");
+    } else if (quiz === "2. Do You Live in the USA?") {
       setQuiz("Are you employed?");
     } else {
       setStep("Review the answers");
@@ -180,10 +180,10 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "Are you over 50?") {
-      setQuiz("Do You Live in the USA?");
-    } else if (quiz === "Do You Live in the USA?") {
-      setQuiz("Are you married?");
+    if (quiz === "1. Are you over 50?") {
+      setQuiz("2. Do You Live in the USA?");
+    } else if (quiz === "2. Do You Live in the USA?") {
+      setQuiz("3. Are you married?");
     } else {
       setStep("Review the answers");
       topScroll("top");
