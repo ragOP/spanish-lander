@@ -171,7 +171,7 @@ export default function Fifth_SP() {
     if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
     } else if (quiz === "2. Do You Live in the USA?") {
-      setQuiz("Are you employed?");
+      setQuiz("3. Are you employed?");
     } else {
       setStep("Review the answers");
       topScroll("top");
