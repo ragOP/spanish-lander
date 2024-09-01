@@ -200,11 +200,23 @@ export default function Fifth_SP() {
         <>
           <div className="main-container-5">
             <div className="main-descrition-5-5"> 
-              <div className="main-des-title-6-7">
+{/*               <div className="main-des-title-6-7">
                 <b>
                 Americans Over 50 Can Now Qualify For The $25,000 Burial Coverage Benefit in 2024!
                 </b>
-              </div>
+              </div> */}
+
+
+              <div className="main-des-title-6-7">
+  <b>
+    Americans Over 50 Can Now Qualify For 
+    <span style="background-color: yellow;">
+      The $25,000 Burial Coverage Benefit
+    </span>
+    in 2024!
+  </b>
+</div>
+
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'20px' }} className="main-des-5">
