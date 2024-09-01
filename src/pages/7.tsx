@@ -202,7 +202,7 @@ export default function Fifth_SP() {
             <div className="main-descrition-5-5"> 
               <div className="main-des-title-6-7">
                 <b>
-                  Are You Qualified For This New Funeral & Burial Coverage Program For American Seniors?
+                Americans Over 50 Can Now Qualify For The $25,000 Burial Coverage Benefit in 2024!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
