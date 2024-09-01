@@ -210,7 +210,7 @@ export default function Fifth_SP() {
             <div className="main-des-title-6-7">
   <b>
     Americans Over 50 Can Now Qualify For{" "}
-    <span style={{ backgroundColor: "yellow" }}>
+    <span style={{ backgroundColor: "#FFC300" }}>
       The $25,000 Burial Coverage Benefit
     </span>{" "}
     in 2024!
