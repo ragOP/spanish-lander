@@ -28,6 +28,7 @@ import Newp from './pages/13'
 import Km from './pages/Km'
 import Hell from "./pages/Hell"
 import Sfoes from './pages/Sfoes'
+import Eng from './pages/Eng'
 function App() {
  console.log('s');
   return (
@@ -39,6 +40,7 @@ function App() {
        
              <Route path = "/engfe1" element = {<S />} />
              <Route path = "/sfoes" element = {<Sfoes />} />
+             <Route path = "/engssdifb1" element = {<Eng />} />
              <Route path = "/fefb1" element = {<Newp />} />
              <Route path = "/bf1" element = {<Km />} />
              <Route path = "/km-engfe1" element = {<Hell />} />
