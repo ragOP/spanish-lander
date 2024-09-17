@@ -39,6 +39,7 @@ export default function Fifth_SP() {
   const [second, setSecond] = useState<any>(0);
   const [yes, setYes] = useState("Yes");
   const [no, setNo] = useState("No");
+  const [congrat, setCongrat] = useState(false)
   
 
   const stepProcess = () => {
@@ -95,10 +96,15 @@ export default function Fifth_SP() {
   const handleQuizN = () => {
     topScroll("btn");
     if (quiz === "1. Are you currently out of work due to a medical condition?") {
-      setQuiz("2. Have you been out of work for at least a year, or are you expecting to be out of work at least a year?");
+      setCongrat(true);
+      setStep("Review the answers");
+      topScroll("top");
     } else if (quiz === "2. Have you been out of work for at least a year, or are you expecting to be out of work at least a year?") {
-      setQuiz("3. Are you married?");
+      setCongrat(true);
+      setStep("Review the answers");
+      topScroll("top");
     } else {
+      setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
     }
@@ -154,26 +160,49 @@ export default function Fifth_SP() {
           {step}
         </div>
       ) : (
-        <div className="checking">
-          <div className="congrats">Congratulations, You Pre-Qualify!  Make A Quick Call To Claim Your Social Security Monthly Payout!</div>
-          <div className="top-description-5">
-            <b>Call us now</b> to secure your benefit.
-          </div>
-          <div className="spots-count">Spot Remaining: 4</div>
-          <a href="tel:+13214858035">
-            <div className="call-btn" onClick={handleCall}>
-            CALL (321) 485-8035
+        congrat === false ? (
+          <div className="checking">
+            <div className="congrats">Congratulations, You Pre-Qualify! Make A Quick Call To Claim Your Social Security Monthly Payout!</div>
+            <div className="top-description-5">
+              <b>Call us now</b> to secure your benefit.
             </div>
-          </a>
-          <div className="sub-description">
-            Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
+            <div className="spots-count">Spot Remaining: 4</div>
+            <a href="tel:+13214858035">
+              <div className="call-btn" onClick={handleCall}>
+                CALL (321) 485-8035
+              </div>
+            </a>
+            <div className="sub-description">
+              Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
+            </div>
+            <div className="timer">
+              <div className="timer-cell">{min}</div>
+              <div className="timer-cell">:</div>
+              <div className="timer-cell">{second}</div>
+            </div>
           </div>
-          <div className="timer">
-            <div className="timer-cell">{min}</div>
-            <div className="timer-cell">:</div>
-            <div className="timer-cell">{second}</div>
+        ) : (
+          <div className="checking">
+            <div className="congrats">Sorry you do not qualify for SSDI Benefits at the moment. Thank you</div>
+            <div className="top-description-5">
+              <b>Call us now</b> to secure your benefit.
+            </div>
+            <div className="spots-count">Spot Remaining: 4</div>
+            <a href="tel:+13214858035">
+              <div className="call-btn" onClick={handleCall}>
+                CALL (321) 485-8035
+              </div>
+            </a>
+            <div className="sub-description">
+              Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
+            </div>
+            <div className="timer">
+              <div className="timer-cell">{min}</div>
+              <div className="timer-cell">:</div>
+              <div className="timer-cell">{second}</div>
+            </div>
           </div>
-        </div>
+        )
       )}
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
