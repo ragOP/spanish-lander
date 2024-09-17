@@ -84,8 +84,8 @@ export default function Fifth_SP() {
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "1. Are you currently out of work due to a medical condition?") {
-      setQuiz("2. Have you been out of work for at least a year, or are you expecting to be out of work at least a year?");
-    } else if (quiz === "2. Have you been out of work for at least a year, or are you expecting to be out of work at least a year?") {
+      setQuiz("2. Have you been unable to work for at least a year due to a physical/medical condition?");
+    } else if (quiz === "2. Have you been unable to work for at least a year due to a physical/medical condition?") {
       setQuiz("3. Do you currently have a lawyer or advocate representing you with your claim?");
     } else {
       setCongrat(true);
@@ -100,7 +100,7 @@ export default function Fifth_SP() {
       setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
-    } else if (quiz === "2. Have you been out of work for at least a year, or are you expecting to be out of work at least a year?") {
+    } else if (quiz === "2. Have you been unable to work for at least a year due to a physical/medical condition?") {
       setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
@@ -184,23 +184,23 @@ export default function Fifth_SP() {
         ) : (
           <div className="checking">
             <div className="congrats">Sorry you do not qualify for SSDI Benefits at the moment. Thank you</div>
-            <div className="top-description-5">
+            {/* <div className="top-description-5">
               <b>Call us now</b> to secure your benefit.
             </div>
             <div className="spots-count">Spot Remaining: 4</div>
             <a href="tel:+13214858035">
               <div className="call-btn" onClick={handleCall}>
                 CALL (321) 485-8035
-              </div>
-            </a>
-            <div className="sub-description">
+              </div> */}
+            {/* </a> */}
+            {/* <div className="sub-description">
               Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
-            </div>
-            <div className="timer">
+            </div> */}
+            {/* <div className="timer">
               <div className="timer-cell">{min}</div>
               <div className="timer-cell">:</div>
               <div className="timer-cell">{second}</div>
-            </div>
+            </div> */}
           </div>
         )
       )}
