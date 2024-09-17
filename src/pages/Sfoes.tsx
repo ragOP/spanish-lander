@@ -10,12 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Head_bg from "../assets/abc.avif";
 import Headline from "../assets/headline_spandeb1.png";
 
-// google tag manager
-// const tagManagerArgs = {
-//   gtmId: "GTM-KZJBC3B",
-// };
-
-// TagManager.initialize(tagManagerArgs);
+;
 
 export default function Fifth_SP() {
 
@@ -24,88 +19,7 @@ export default function Fifth_SP() {
     exit: "toast-exit",
   });
   
-  const messages = [
-    "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
-    "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
-    "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
-    "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
-    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
-  ];
-  
-  // Function to shuffle array in place
-  const shuffleArray = (array:any) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  };
-  
-  shuffleArray(messages);
-  
-  const notify = (message:any) => {
-    // Dismiss all existing toasts
-    toast.dismiss();
-    let boldedMessage = message;
-  
-    // Make the word "Allowance" bold in all lines
-    boldedMessage = boldedMessage.replace(
-      /\$3,600 Grocery Allowance/g,
-      '<strong class="green-bold">$3,600 Grocery Allowance</strong>'
-    );
-  
-    // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
-    specialAmounts.forEach((amount) => {
-      if (message.includes(amount)) {
-        boldedMessage = boldedMessage.replace(
-          amount,
-          `<strong class="green-bold">${amount}</strong>`
-        );
-      }
-    });
-  
-    // Show new toast
-    toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      closeButton: false,
-    });
-  };
-  
-  useEffect(() => {
-    const delayedEffect = setTimeout(() => {
-      // Create a function to handle the logic
-      const showRandomToast = () => {
-        const randomTime = 6000;
-        const randomMessage =
-          messages[Math.floor(Math.random() * messages.length)];
-        notify(randomMessage);
-        return randomTime;
-      };
-  
-      // Show the first toast
-      let nextTime = showRandomToast();
-  
-      // Set up a recurring timer
-      const timer = setInterval(() => {
-        nextTime = showRandomToast();
-      }, nextTime);
-  
-      // Cleanup
-      return () => {
-        clearInterval(timer);
-      };
-    }, 6000); // 6-second delay before the useEffect code runs
-  
-    // Cleanup for the setTimeout
-    return () => {
-      clearTimeout(delayedEffect);
-    };
-  }, []);
+ 
   
   useEffect(() => {
     window.document.title = "Senior's Allowance Program 2024";
@@ -264,17 +178,8 @@ export default function Fifth_SP() {
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
       </div>
-      {/* <ToastContainer
-        transition={SlideUp}
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        draggable
-        pauseOnHover
-      /> */}
+    
+     
     </div>
   );
 }
