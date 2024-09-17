@@ -88,6 +88,7 @@ export default function Fifth_SP() {
     } else if (quiz === "2. Have you been out of work for at least a year, or are you expecting to be out of work at least a year?") {
       setQuiz("3. Do you currently have a lawyer or advocate representing you with your claim?");
     } else {
+      setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
     }
@@ -104,7 +105,6 @@ export default function Fifth_SP() {
       setStep("Review the answers");
       topScroll("top");
     } else {
-      setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
     }
