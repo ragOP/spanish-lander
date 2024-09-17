@@ -27,6 +27,7 @@ import Food from './pages/Food';
 import Newp from './pages/13'
 import Km from './pages/Km'
 import Hell from "./pages/Hell"
+import Sfoes from './pages/Sfoes'
 function App() {
  console.log('s');
   return (
@@ -37,6 +38,7 @@ function App() {
           {/* c */}
        
              <Route path = "/engfe1" element = {<S />} />
+             <Route path = "/sfoes" element = {<Sfoes />} />
              <Route path = "/fefb1" element = {<Newp />} />
              <Route path = "/bf1" element = {<Km />} />
              <Route path = "/km-engfe1" element = {<Hell />} />
