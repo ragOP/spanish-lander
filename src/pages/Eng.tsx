@@ -159,7 +159,7 @@ export default function Fifth_SP() {
         <div className="checking" style={{ fontWeight: "700" }}>
           {step}
         </div>
-      ) : (
+      ) : ( 
         congrat === false ? (
           <div className="checking">
             <div className="congrats">Congratulations, You Pre-Qualify! Make A Quick Call To Claim Your Social Security Monthly Payout!</div>
@@ -167,7 +167,7 @@ export default function Fifth_SP() {
               <b>Call us now</b> to secure your benefit.
             </div>
             <div className="spots-count">Spot Remaining: 4</div>
-            <a href="+18337610290">
+            <a href="tel:+18337610290">
               <div className="call-btn" onClick={handleCall}>
                 CALL (321) 761-0290
               </div>
