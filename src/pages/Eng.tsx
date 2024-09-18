@@ -33,7 +33,7 @@ export default function Fifth_SP() {
 
   };
 
-  const [quiz, setQuiz] = useState("1. Are you currently out of work due to a medical condition?");
+  const [quiz, setQuiz] = useState("1. Have you been unable to work for at least a year due to a physical/medical condition?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -83,24 +83,18 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "1. Are you currently out of work due to a medical condition?") {
-      setQuiz("2. Have you been unable to work for at least a year due to a physical/medical condition?");
-    } else if (quiz === "2. Have you been unable to work for at least a year due to a physical/medical condition?") {
-      setQuiz("3. Do you currently have a lawyer or advocate representing you with your claim?");
+    if (quiz === "1. Have you been unable to work for at least a year due to a physical/medical condition?") {
+      setQuiz("2. Do you currently have a lawyer or advocate representing you with your claim?");
     } else {
       setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
     }
   };
-
+  
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "1. Are you currently out of work due to a medical condition?") {
-      setCongrat(true);
-      setStep("Review the answers");
-      topScroll("top");
-    } else if (quiz === "2. Have you been unable to work for at least a year due to a physical/medical condition?") {
+    if (quiz === "1. Have you been unable to work for at least a year due to a physical/medical condition?") {
       setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
@@ -109,7 +103,7 @@ export default function Fifth_SP() {
       topScroll("top");
     }
   };
-
+  
   return (
     <div>
       {/* <ToastContainer /> */}
@@ -137,7 +131,7 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'20px' }} className="main-des-5">
-                Answer 3 simple questions below to check eligibility
+                Answer 2 simple questions below to check eligibility
               </div> 
             </div>
             <div style={{ marginTop: '15px' }} className="survey">
