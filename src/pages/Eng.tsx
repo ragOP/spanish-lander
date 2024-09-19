@@ -84,12 +84,13 @@ export default function Fifth_SP() {
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "1. Have you been unable to work for at least a year due to a physical/medical condition?") {
-      setNo("Yes")
       setYes("No")
+      setNo("Yes")
+
       setQuiz("2. Do you currently have a lawyer or advocate representing you with your claim?");
     } else {
      
-      setCongrat(true);
+      setCongrat(false);
       setStep("Review the answers");
       topScroll("top");
     }
@@ -103,7 +104,7 @@ export default function Fifth_SP() {
       setStep("Review the answers");
       topScroll("top");
     } else {
-      
+      setCongrat(true);
       setStep("Review the answers");
       topScroll("top");
     }
