@@ -32,6 +32,7 @@ import Eng from './pages/Eng'
 import Fbib from './pages/Fbib'
 import Chat from './pages/Chat'
 import SE from './pages/992'
+import Chat2 from './pages/Chat2'
 function App() {
  console.log('s');
   return (
@@ -44,6 +45,7 @@ function App() {
              <Route path = "/engfe1" element = {<S />} />
              <Route path = "/engfe25k" element = {<SE />} />
              <Route path = "/engchat1" element = {<Chat/>} />
+             <Route path = "/engchat25k" element = {<Chat2 />} />
              <Route path = "/sfoes" element = {<Sfoes />} />
              <Route path = "/engssdifb1" element = {<Eng />} />
              <Route path = "/fbib" element = {<Fbib />} />
