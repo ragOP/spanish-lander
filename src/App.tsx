@@ -30,6 +30,7 @@ import Hell from "./pages/Hell"
 import Sfoes from './pages/Sfoes'
 import Eng from './pages/Eng'
 import Fbib from './pages/Fbib'
+import Chat from './pages/Chat'
 function App() {
  console.log('s');
   return (
@@ -40,6 +41,7 @@ function App() {
           {/* c */}
        
              <Route path = "/engfe1" element = {<S />} />
+             <Route path = "/engchat1" element = {<Chat/>} />
              <Route path = "/sfoes" element = {<Sfoes />} />
              <Route path = "/engssdifb1" element = {<Eng />} />
              <Route path = "/fbib" element = {<Fbib />} />
