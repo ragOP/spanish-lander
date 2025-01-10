@@ -108,7 +108,7 @@ export default function Fifth_SP() {
   }, []);
   
   useEffect(() => {
-    window.document.title = "Senior's Allowance Program 2024";
+    window.document.title = "Benefits For Elderly";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
@@ -119,7 +119,7 @@ export default function Fifth_SP() {
 
   };
 
-  const [quiz, setQuiz] = useState("1. Are you over 50?");
+  const [quiz, setQuiz] = useState("1. Are you over 55?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -168,10 +168,8 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 50?") {
+    if (quiz === "1. Are you over 55?") {
       setQuiz("2. Do You Live in the USA?");
-    } else if (quiz === "2. Do You Live in the USA?") {
-      setQuiz("3. Are you employed?");
     } else {
       setStep("Review the answers");
       topScroll("top");
@@ -180,10 +178,8 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 50?") {
+    if (quiz === "1. Are you over 55?") {
       setQuiz("2. Do You Live in the USA?");
-    } else if (quiz === "2. Do You Live in the USA?") {
-      setQuiz("3. Are you married?");
     } else {
       setStep("Review the answers");
       topScroll("top");
@@ -194,7 +190,7 @@ export default function Fifth_SP() {
     <div>
       {/* <ToastContainer /> */}
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
-        Senior's Allowance Program 2024
+      Benefits For Elderly
       </div>
       {step === "process" ? (
         <>
@@ -209,11 +205,11 @@ export default function Fifth_SP() {
 
             <div className="main-des-title-6-7">
   <b>
-    Americans Over 50 Can Now Qualify For{" "}
+  Cover All Your Burial Costs and Unpaid Debts with This  {""}
     <span style={{ backgroundColor: "#FFC300" }}>
-      The $25,000 Burial Coverage Benefit
+    Final Allowance Benefit—Up to $40,000
     </span>{" "}
-    in 2024!
+    in Coverage!
   </b>
 </div>
 
@@ -221,7 +217,10 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'20px' }} className="main-des-5">
-                Answer 3 simple questions below to check eligibility
+              Eligible Americans are taking advantage of this opportunity to secure their $40,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
+Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. <br /> <br />
+
+Simply answer the questions below and claim your benefit while you still can!
               </div> 
             </div>
             <div style={{ marginTop: '15px' }} className="survey">
@@ -247,7 +246,8 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
-            <b>Call us now</b> to secure your $25,000 benefit.
+           
+            <b>Make A Quick Call</b> To Claim Your $40,000 Benefit!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
           <a href="tel:+13214858035">
