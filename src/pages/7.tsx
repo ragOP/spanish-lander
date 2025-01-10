@@ -190,9 +190,38 @@ export default function Fifth_SP() {
     <div>
       {/* <ToastContainer /> */}
 
-      <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2Above" id="top">
-      Hotlines to claim this benefit will close on 10th Jan, 9P.M. 
-      </div>
+      <div
+  style={{
+    marginBottom: '4px',
+    overflow: 'hidden', // Ensure the text doesn't overflow outside the container
+    whiteSpace: 'nowrap', // Prevent the text from wrapping
+  }}
+  className="top-sticky-blue-test2Above"
+  id="top"
+>
+  <div
+    style={{
+      display: 'inline-block',
+      animation: 'scroll 20s linear infinite', // Slower animation
+    }}
+  >
+    Hotlines to claim this benefit will close on 10th Jan, 9P.M.
+  </div>
+  <style>
+    {`
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%); /* Start off-screen to the right */
+        }
+        100% {
+          transform: translateX(-100%); /* End off-screen to the left */
+        }
+      }
+    `}
+  </style>
+</div>
+
+
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
       Benefits For Elderly
       </div>
