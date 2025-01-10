@@ -191,7 +191,7 @@ export default function Fifth_SP() {
       {/* <ToastContainer /> */}
 
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2Above" id="top">
-      Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. 
+      Hotlines to claim this benefit will close on 10th Jan, 9P.M. 
       </div>
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
       Benefits For Elderly

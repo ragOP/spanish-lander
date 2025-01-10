@@ -68,21 +68,23 @@ a{
   padding: 0.75rem 16rem;
   background-color: rgb(37, 132, 6);
   color: rgb(255, 255, 255);
-  font-size: 1rem;
+  font-size: 1rem !important; 
   font-weight: 800;
-  text-align: left;
+
 
 }
 
 @media (max-width: 768px) {
   .top-sticky-blue-test2 {
     text-align: center; /* Center-align the text */
-    padding: 0.75rem 1rem; /* Adjust padding for smaller screens */
+    padding: 0.75rem 4rem; /* Adjust padding for smaller screens */
+    margin-top: -10px;
   }
 
   .top-sticky-blue-test2Above {
-    text-align: left; /* Center-align the text */
-    padding: 0.75rem 4.2rem; /* Adjust padding for smaller screens */
+   
+    font-size: .7rem !important; 
+    padding: 0.75rem 1rem; /* Adjust padding for smaller screens */
   }
 }
   
