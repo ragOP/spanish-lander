@@ -222,7 +222,7 @@ export default function Fifth_SP() {
 </div>
 
 
-      <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
+      <div style={{ marginBottom: '4px',  height: '60px' }} className="top-sticky-blue-test2" id="top">
       Benefits For Elderly
       </div>
 
