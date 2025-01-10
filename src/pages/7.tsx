@@ -189,9 +189,14 @@ export default function Fifth_SP() {
   return (
     <div>
       {/* <ToastContainer /> */}
+
+      <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
+      Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. 
+      </div>
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
       Benefits For Elderly
       </div>
+
       {step === "process" ? (
         <>
           <div className="main-container-5">
@@ -207,9 +212,9 @@ export default function Fifth_SP() {
   <b>
   Cover All Your Burial Costs and Unpaid Debts with This  {""}
     <span style={{ backgroundColor: "#FFC300" }}>
-    Final Allowance Benefit—Up to $40,000
+    Final Allowance Benefit Worth $40,000!
     </span>{" "}
-    in Coverage!
+   
   </b>
 </div>
 
@@ -218,7 +223,7 @@ export default function Fifth_SP() {
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
               Eligible Americans are taking advantage of this opportunity to secure their $40,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
-Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. <br /> <br />
+<br /> <br />
 
 Simply answer the questions below and claim your benefit while you still can!
               </div> 
