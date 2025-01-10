@@ -242,7 +242,7 @@
 
         const userImge = document.createElement("div");
         userImge.className = `flex-shrink-0 avatar-user w-8`;
-        userImge.innerHTML = ` <img class="w-8 h-8 rounded-full" src="./images/user.png" alt="User Avatar" />`;
+        userImge.innerHTML = ` <img class="w-8 h-8 rounded-full" src="https://sub.foodallowances.org/images/user.png" />`;
 
         userBlock.appendChild(userMessage);
         userBlock.appendChild(userImge);
