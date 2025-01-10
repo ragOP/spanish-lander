@@ -118,7 +118,7 @@
         avatarContainer.className = "agent-img flex-shrink-0 ";
 
         const avatar = document.createElement("img");
-        avatar.src = "./images/avatar.webp";
+        avatar.src = "https://sub.foodallowances.org/images/avatar.webp";
         avatar.alt = "Emily Avatar";
         avatar.className = "w-8 h-8 rounded-full";
         avatarContainer.appendChild(avatar);
