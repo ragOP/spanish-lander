@@ -216,7 +216,7 @@ export default function Fifth_SP() {
 
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
-              <div style={{ marginTop: '14px',marginLeft:'20px' }} className="main-des-5">
+              <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
               Eligible Americans are taking advantage of this opportunity to secure their $40,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
 Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. <br /> <br />
 
