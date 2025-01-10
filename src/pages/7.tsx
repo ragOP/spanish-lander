@@ -123,8 +123,8 @@ export default function Fifth_SP() {
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes, setYes] = useState("Yes");
-  const [no, setNo] = useState("No");
+  const [yes, setYes] = useState("YES, I'M 55 OR OLDER");
+  const [no, setNo] = useState("NO, I'M 54 OR YOUNGER");
   
 
   const stepProcess = () => {
@@ -190,7 +190,7 @@ export default function Fifth_SP() {
     <div>
       {/* <ToastContainer /> */}
 
-      <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
+      <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2Above" id="top">
       Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. 
       </div>
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
