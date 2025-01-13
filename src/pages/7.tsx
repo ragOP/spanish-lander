@@ -293,7 +293,7 @@ Simply answer the questions below and claim your benefit while you still can!
             <b>Make A Quick Call</b> To Claim Your $40,000 Benefit!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
-          <a href="tel:++13214858035">
+          <a href="tel:+13214858035">
             <div className="call-btn" onClick={handleCall}>
             CALL (321) 485-8035
             </div>
