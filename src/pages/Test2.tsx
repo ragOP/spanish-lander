@@ -117,9 +117,13 @@ export default function Fifth_SP() {
     const gclid = params.get("gclid");
     const wbraid = params.get("wbraid");
     const gbraid = params.get("gbraid");
+    const newsbreak_cid=params.get("newsbreak_cid");
 
-    if (gclid || wbraid || gbraid) {
-      setPhoneNumber("999999");
+    if (gclid || wbraid || gbraid || newsbreak_cid) {
+    
+    }
+    else{
+      setPhoneNumber("314-234-1234");
     }
   }, []);
   useEffect(() => {
