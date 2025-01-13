@@ -119,12 +119,12 @@ export default function Fifth_SP() {
 
   };
 
-  const [quiz, setQuiz] = useState("1. Are you over 55?");
+  const [quiz, setQuiz] = useState("1. Are you over 50?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes, setYes] = useState("YES, I'M 55 OR OLDER");
-  const [no, setNo] = useState("NO, I'M 54 OR YOUNGER");
+  const [yes, setYes] = useState("YES, I'M 50 OR OLDER");
+  const [no, setNo] = useState("YES, I'M 49 OR YOUNGER");
   
 
   const stepProcess = () => {
@@ -168,7 +168,7 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 55?") {
+    if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
     } else {
       setStep("Review the answers");
@@ -178,14 +178,19 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 55?") {
+    if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
     } else {
       setStep("Review the answers");
       topScroll("top");
     }
   };
-
+  const closingDate = new Date(); // Gets today's date
+  const formattedDate = closingDate.toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
   return (
     <div>
       {/* <ToastContainer /> */}
@@ -205,7 +210,7 @@ export default function Fifth_SP() {
       animation: 'scroll 20s linear infinite', // Slower animation
     }}
   >
-    Hotlines to claim this benefit will close on 10th Jan, 9P.M.
+ {`Hotlines to claim this benefit will close on ${formattedDate}, 9 P.M.`}
   </div>
   <style>
     {`
