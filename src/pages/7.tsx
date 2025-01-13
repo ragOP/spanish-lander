@@ -42,6 +42,8 @@ export default function Fifth_SP() {
   
   shuffleArray(messages);
   
+
+  
   const notify = (message:any) => {
     // Dismiss all existing toasts
     toast.dismiss();
@@ -107,6 +109,23 @@ export default function Fifth_SP() {
     };
   }, []);
   
+
+  const [phoneNumber, setPhoneNumber] = useState("(321) 485-8035");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search.toLowerCase());
+    const gclid = params.get("gclid");
+    const wbraid = params.get("wbraid");
+    const gbraid = params.get("gbraid");
+    const newsbreak_cid=params.get("newsbreak_cid");
+
+    if (gclid || wbraid || gbraid || newsbreak_cid) {
+    
+    }
+    else{
+      setPhoneNumber("314-234-1234");
+    }
+  }, []);
   useEffect(() => {
     window.document.title = "Benefits For Elderly";
 
@@ -293,11 +312,11 @@ Simply answer the questions below and claim your benefit while you still can!
             <b>Make A Quick Call</b> To Claim Your $40,000 Benefit!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
-          <a href="tel:+13214858035">
-            <div className="call-btn" onClick={handleCall}>
-            CALL (321) 485-8035
-            </div>
-          </a>
+          <a href={`tel:${phoneNumber.replace(/[^0-9]/g, "")}`}>
+      <div className="call-btn" onClick={handleCall}>
+        CALL {phoneNumber}
+      </div>
+    </a>
           <div className="sub-description">
             Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
           </div>
