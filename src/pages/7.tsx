@@ -167,22 +167,22 @@ export default function Fifth_SP() {
   };
 
   const handleQuizP = () => {
-    topScroll("btn");
     if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
+      setYes("Yes");
+      setNo("No");
     } else {
       setStep("Review the answers");
-      topScroll("top");
     }
   };
 
   const handleQuizN = () => {
-    topScroll("btn");
     if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
+      setYes("Yes");
+      setNo("No");
     } else {
       setStep("Review the answers");
-      topScroll("top");
     }
   };
   const closingDate = new Date(); // Gets today's date
