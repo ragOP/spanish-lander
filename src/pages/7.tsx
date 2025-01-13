@@ -124,7 +124,7 @@ export default function Fifth_SP() {
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
   const [yes, setYes] = useState("YES, I'M 50 OR OLDER");
-  const [no, setNo] = useState("YES, I'M 49 OR YOUNGER");
+  const [no, setNo] = useState("NO, I'M 49 OR YOUNGER");
   
 
   const stepProcess = () => {
