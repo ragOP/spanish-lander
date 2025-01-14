@@ -147,17 +147,17 @@ export default function Fifth_SP() {
   
 
   const stepProcess = () => {
-    if (step === "Review the answers") {
+    if (step === "Reviewing the answers...") {
       setTimeout(() => {
-        setStep("Search for available spots");
+        setStep("Searching for available spots...");
       }, 1500);
     }
-    if (step === "Search for available spots") {
+    if (step === "Searching for available spots...") {
       setTimeout(() => {
-        setStep("Eligibility confirmation");
+        setStep("Confirming Eligibility...");
       }, 1500);
     }
-    if (step === "Eligibility confirmation") {
+    if (step === "Confirming Eligibility...") {
       setTimeout(() => {
         setStep("completed");
 
