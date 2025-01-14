@@ -309,7 +309,7 @@ Simply answer the questions below and claim your benefit while you still can!
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
            
-            <b>Make A Quick Call</b> To Claim Your $40,000 Benefit!
+            <b>Make A Quick Call </b> To Claim Your Final Allowance Benefit Worth Upto $40,000!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
           <a href={`tel:${phoneNumber.replace(/[^0-9]/g, "")}`}>
