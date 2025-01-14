@@ -123,22 +123,22 @@ export default function Fifth_SP() {
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes, setYes] = useState("Yes");
-  const [no, setNo] = useState("No");
+  const [yes, setYes] = useState("YES, I'M 55 OR OLDER");
+  const [no, setNo] = useState("NO, I'M 54 OR YOUNGER");
   
 
   const stepProcess = () => {
-    if (step === "Review the answers") {
+    if (step === "Reviewing the answers...") {
       setTimeout(() => {
-        setStep("Search for available spots");
+        setStep("Searching for available spots...");
       }, 1500);
     }
-    if (step === "Search for available spots") {
+    if (step === "Searching for available spots...") {
       setTimeout(() => {
-        setStep("Eligibility confirmation");
+        setStep("Confirming Eligibility...");
       }, 1500);
     }
-    if (step === "Eligibility confirmation") {
+    if (step === "Confirming Eligibility...") {
       setTimeout(() => {
         setStep("completed");
 
@@ -170,8 +170,10 @@ export default function Fifth_SP() {
     topScroll("btn");
     if (quiz === "1. Are you over 55?") {
       setQuiz("2. Do You Live in the USA?");
+      setYes("Yes");
+      setNo("No");
     } else {
-      setStep("Review the answers");
+      setStep("Reviewing the answers...");
       topScroll("top");
     }
   };
@@ -180,8 +182,10 @@ export default function Fifth_SP() {
     topScroll("btn");
     if (quiz === "1. Are you over 55?") {
       setQuiz("2. Do You Live in the USA?");
+      setYes("Yes");
+      setNo("No");
     } else {
-      setStep("Review the answers");
+      setStep("Reviewing the answers...");
       topScroll("top");
     }
   };
@@ -247,7 +251,7 @@ Simply answer the questions below and claim your benefit while you still can!
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
            
-            <b>Make A Quick Call</b> To Claim Your $25,000 Benefit!
+          <b>Make A Quick Call</b> To Claim Your Final Allowance Benefit Worth Upto $25,000!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
           <a href="tel:++13214858035">
