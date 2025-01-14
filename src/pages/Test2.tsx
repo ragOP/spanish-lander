@@ -25,11 +25,11 @@ export default function Fifth_SP() {
   });
   
   const messages = [
-    "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
-    "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
-    "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
-    "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
-    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
+    "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
+    "Emily A. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
+    "Michael D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
+    "Michael D. from Texas just qualified for a $36,000 Final Expense Coverage",
+    "Michael D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
   ];
   
   // Function to shuffle array in place
@@ -44,19 +44,17 @@ export default function Fifth_SP() {
   
 
   
-  const notify = (message:any) => {
+  const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
-    let boldedMessage = message;
   
-    // Make the word "Allowance" bold in all lines
-    boldedMessage = boldedMessage.replace(
-      /\$3,600 Grocery Allowance/g,
-      '<strong class="green-bold">$3,600 Grocery Allowance</strong>'
+    // Bold formatting for specific keywords
+    let boldedMessage = message.replace(
+      /\$40,000 Final Expense Coverage/g,
+      '<strong class="green-bold">$40,000 Final Expense Coverage</strong>'
     );
   
-    // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+    const specialAmounts = ["$25,000", "$36,000", "$16,800"];
     specialAmounts.forEach((amount) => {
       if (message.includes(amount)) {
         boldedMessage = boldedMessage.replace(
@@ -66,17 +64,19 @@ export default function Fifth_SP() {
       }
     });
   
-    // Show new toast
+    // Show the new toast
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: 5000, // Automatically close after 5 seconds
       hideProgressBar: true,
       closeOnClick: false,
       pauseOnHover: true,
       draggable: true,
       closeButton: false,
+      toastId: "unique-toast-id", // Ensure a unique ID
     });
   };
+  
   
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
@@ -147,17 +147,17 @@ export default function Fifth_SP() {
   
 
   const stepProcess = () => {
-    if (step === "Review the answers") {
+    if (step === "Reviewing the answers...") {
       setTimeout(() => {
-        setStep("Search for available spots");
+        setStep("Searching for available spots...");
       }, 1500);
     }
-    if (step === "Search for available spots") {
+    if (step === "Searching for available spots...") {
       setTimeout(() => {
-        setStep("Eligibility confirmation");
+        setStep("Confirming Eligibility...");
       }, 1500);
     }
-    if (step === "Eligibility confirmation") {
+    if (step === "Confirming Eligibility...") {
       setTimeout(() => {
         setStep("completed");
 
@@ -309,7 +309,7 @@ Simply answer the questions below and claim your benefit while you still can!
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
            
-            <b>Make A Quick Call</b> To Claim Your $40,000 Benefit!
+            <b>Make A Quick Call </b> To Claim Your Final Allowance Benefit Worth Upto $40,000!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
           <a href={`tel:${phoneNumber.replace(/[^0-9]/g, "")}`}>
@@ -330,7 +330,7 @@ Simply answer the questions below and claim your benefit while you still can!
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
       </div>
-      {/* <ToastContainer
+      <ToastContainer
         transition={SlideUp}
         position="bottom-right"
         autoClose={5000}
@@ -340,7 +340,7 @@ Simply answer the questions below and claim your benefit while you still can!
         rtl={false}
         draggable
         pauseOnHover
-      /> */}
+      />
     </div>
   );
 }
