@@ -25,11 +25,11 @@ export default function Fifth_SP() {
   });
   
   const messages = [
-    "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
-    "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
-    "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
-    "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
-    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
+    "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
+    "Emily A. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
+    "Sunny D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
+    "Sayem K. from Texas just qualified for a $36,000 Final Expense Coverage",
+    "Tom D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
   ];
   
   // Function to shuffle array in place
@@ -43,20 +43,17 @@ export default function Fifth_SP() {
   shuffleArray(messages);
   
 
-  
-  const notify = (message:any) => {
+  const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
-    let boldedMessage = message;
   
-    // Make the word "Allowance" bold in all lines
-    boldedMessage = boldedMessage.replace(
-      /\$3,600 Grocery Allowance/g,
-      '<strong class="green-bold">$3,600 Grocery Allowance</strong>'
+    // Bold formatting for specific keywords
+    let boldedMessage = message.replace(
+      /\$40,000 Final Expense Coverage/g,
+      '<strong class="green-bold">$40,000 Final Expense Coverage</strong>'
     );
   
-    // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+    const specialAmounts = ["$25,000", "$36,000", "$16,800"];
     specialAmounts.forEach((amount) => {
       if (message.includes(amount)) {
         boldedMessage = boldedMessage.replace(
@@ -66,7 +63,6 @@ export default function Fifth_SP() {
       }
     });
   
-    // Show new toast
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
       autoClose: 5000,
@@ -77,6 +73,7 @@ export default function Fifth_SP() {
       closeButton: false,
     });
   };
+  
   
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
@@ -330,17 +327,16 @@ Simply answer the questions below and claim your benefit while you still can!
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
       </div>
-      {/* <ToastContainer
-        transition={SlideUp}
+      <ToastContainer
         position="bottom-right"
         autoClose={5000}
-        hideProgressBar
         newestOnTop={false}
         closeOnClick
         rtl={false}
+        pauseOnFocusLoss
         draggable
         pauseOnHover
-      /> */}
+      />
     </div>
   );
 }
