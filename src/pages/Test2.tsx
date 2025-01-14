@@ -27,9 +27,9 @@ export default function Fifth_SP() {
   const messages = [
     "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
     "Emily A. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
-    "Michael D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
-    "Michael D. from Texas just qualified for a $36,000 Final Expense Coverage",
-    "Michael D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
+    "Sunny D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
+    "Sayem K. from Texas just qualified for a $36,000 Final Expense Coverage",
+    "Tom D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
   ];
   
   // Function to shuffle array in place
@@ -64,16 +64,14 @@ export default function Fifth_SP() {
       }
     });
   
-    // Show the new toast
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
-      autoClose: 5000, // Automatically close after 5 seconds
+      autoClose: 5000,
       hideProgressBar: true,
       closeOnClick: false,
       pauseOnHover: true,
       draggable: true,
       closeButton: false,
-      toastId: "unique-toast-id", // Ensure a unique ID
     });
   };
   
@@ -331,13 +329,12 @@ Simply answer the questions below and claim your benefit while you still can!
         <div className="terms">Terms & Conditions | Privacy Policy</div>
       </div>
       <ToastContainer
-        transition={SlideUp}
         position="bottom-right"
         autoClose={5000}
-        hideProgressBar
         newestOnTop={false}
         closeOnClick
         rtl={false}
+        pauseOnFocusLoss
         draggable
         pauseOnHover
       />
