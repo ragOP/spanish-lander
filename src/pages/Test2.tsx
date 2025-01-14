@@ -190,7 +190,7 @@ export default function Fifth_SP() {
       setYes("Yes");
       setNo("No");
     } else {
-      setStep("Review the answers");
+      setStep("Reviewing the answers...");
       topScroll("top");
     }
   };
@@ -202,7 +202,7 @@ export default function Fifth_SP() {
       setYes("Yes");
       setNo("No");
     } else {
-      setStep("Review the answers");
+      setStep("Reviewing the answers...");
       topScroll("top");
     }
   };
