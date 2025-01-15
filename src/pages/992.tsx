@@ -25,11 +25,11 @@ export default function Fifth_SP() {
   });
   
   const messages = [
-    "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
-    "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
-    "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
-    "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
-    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
+    "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
+    "Jane L. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
+    "Sunny D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
+    "Moody K. from Texas just qualified for a $36,000 Final Expense Coverage",
+    "Tom D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
   ];
   
   // Function to shuffle array in place
@@ -42,19 +42,17 @@ export default function Fifth_SP() {
   
   shuffleArray(messages);
   
-  const notify = (message:any) => {
+  const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
-    let boldedMessage = message;
   
-    // Make the word "Allowance" bold in all lines
-    boldedMessage = boldedMessage.replace(
-      /\$3,600 Grocery Allowance/g,
-      '<strong class="green-bold">$3,600 Grocery Allowance</strong>'
+    // Bold formatting for specific keywords
+    let boldedMessage = message.replace(
+      /\$40,000 Final Expense Coverage/g,
+      '<strong class="green-bold">$40,000 Final Expense Coverage</strong>'
     );
   
-    // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+    const specialAmounts = ["$25,000", "$36,000", "$16,800"];
     specialAmounts.forEach((amount) => {
       if (message.includes(amount)) {
         boldedMessage = boldedMessage.replace(
@@ -64,7 +62,6 @@ export default function Fifth_SP() {
       }
     });
   
-    // Show new toast
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
       autoClose: 5000,
@@ -75,6 +72,7 @@ export default function Fifth_SP() {
       closeButton: false,
     });
   };
+  
   
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
@@ -107,6 +105,7 @@ export default function Fifth_SP() {
     };
   }, []);
   
+  
   useEffect(() => {
     window.document.title = "Benefits For Elderly";
 
@@ -119,12 +118,12 @@ export default function Fifth_SP() {
 
   };
 
-  const [quiz, setQuiz] = useState("1. Are you over 55?");
+  const [quiz, setQuiz] = useState("1. Are you over 50?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes, setYes] = useState("YES, I'M 55 OR OLDER");
-  const [no, setNo] = useState("NO, I'M 54 OR YOUNGER");
+  const [yes, setYes] = useState("YES, I'M 50 OR OLDER");
+  const [no, setNo] = useState("NO, I'M 49 OR YOUNGER");
   
 
   const stepProcess = () => {
@@ -168,7 +167,7 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 55?") {
+    if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
       setYes("Yes");
       setNo("No");
@@ -180,7 +179,7 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 55?") {
+    if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
       setYes("Yes");
       setNo("No");
@@ -190,9 +189,46 @@ export default function Fifth_SP() {
     }
   };
 
+  const closingDate = new Date(); // Gets today's date
+  const formattedDate = closingDate.toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
   return (
     <div>
       {/* <ToastContainer /> */}
+
+      <div
+  style={{
+    marginBottom: '4px',
+    overflow: 'hidden', // Ensure the text doesn't overflow outside the container
+    whiteSpace: 'nowrap', // Prevent the text from wrapping
+  }}
+  className="top-sticky-blue-test2Above"
+  id="top"
+>
+  <div
+    style={{
+      display: 'inline-block',
+      animation: 'scroll 20s linear infinite', // Slower animation
+    }}
+  >
+ {`Hotlines to claim this benefit will close on ${formattedDate}, 9 P.M.`}
+  </div>
+  <style>
+    {`
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%); /* Start off-screen to the right */
+        }
+        100% {
+          transform: translateX(-100%); /* End off-screen to the left */
+        }
+      }
+    `}
+  </style>
+</div>
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
       Benefits For Elderly
       </div>
@@ -222,7 +258,7 @@ export default function Fifth_SP() {
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
               Eligible Americans are taking advantage of this opportunity to secure their $25,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
-Hotlines to claim this benefit will on 10th Jan, 9P.M. EST. <br /> <br />
+<br /> <br />
 
 Simply answer the questions below and claim your benefit while you still can!
               </div> 
@@ -272,17 +308,16 @@ Simply answer the questions below and claim your benefit while you still can!
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
       </div>
-      {/* <ToastContainer
-        transition={SlideUp}
+      <ToastContainer
         position="bottom-right"
         autoClose={5000}
-        hideProgressBar
         newestOnTop={false}
         closeOnClick
         rtl={false}
+        pauseOnFocusLoss
         draggable
         pauseOnHover
-      /> */}
+      />
     </div>
   );
 }
