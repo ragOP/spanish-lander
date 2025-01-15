@@ -26,10 +26,10 @@ export default function Fifth_SP() {
   
   const messages = [
     "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
-    "Emily A. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
-    "Sunny D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
-    "Sayem K. from Texas just qualified for a $36,000 Final Expense Coverage",
-    "Tom D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
+    "Jane L. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
+    "Sunny D. from LOS ANGELES,just qualified for a $40,000 Final Expense Coverage",
+    "Moody K. from Texas just qualified for a $36,000 Final Expense Coverage",
+    "Tom D. from Seattle just qualified for a $40,000 Final Expense Coverage"
   ];
   
   // Function to shuffle array in place
@@ -41,8 +41,6 @@ export default function Fifth_SP() {
   };
   
   shuffleArray(messages);
-  
-
   
   const notify = (message: any) => {
     // Dismiss all existing toasts
@@ -80,50 +78,33 @@ export default function Fifth_SP() {
     const delayedEffect = setTimeout(() => {
       // Create a function to handle the logic
       const showRandomToast = () => {
-        const randomTime = 6000;
         const randomMessage =
           messages[Math.floor(Math.random() * messages.length)];
         notify(randomMessage);
-        return randomTime;
       };
   
       // Show the first toast
-      let nextTime = showRandomToast();
+      showRandomToast();
   
-      // Set up a recurring timer
+      // Set up a recurring timer with a fixed 3-second interval
       const timer = setInterval(() => {
-        nextTime = showRandomToast();
-      }, nextTime);
+        showRandomToast();
+      }, 3000); // 3-second delay between toasts
   
       // Cleanup
       return () => {
         clearInterval(timer);
       };
-    }, 6000); // 6-second delay before the useEffect code runs
+    }, 6000); // 6-second initial delay before starting the useEffect logic
   
     // Cleanup for the setTimeout
     return () => {
       clearTimeout(delayedEffect);
     };
   }, []);
+  ;
   
-
-  const [phoneNumber, setPhoneNumber] = useState("(321) 485-8035");
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search.toLowerCase());
-    const gclid = params.get("gclid");
-    const wbraid = params.get("wbraid");
-    const gbraid = params.get("gbraid");
-    const newsbreak_cid=params.get("newsbreak_cid");
-
-    if (gclid || wbraid || gbraid || newsbreak_cid) {
-    
-    }
-    else{
-      setPhoneNumber("314-234-1234");
-    }
-  }, []);
+  
   useEffect(() => {
     window.document.title = "Benefits For Elderly";
 
@@ -206,6 +187,7 @@ export default function Fifth_SP() {
       topScroll("top");
     }
   };
+
   const closingDate = new Date(); // Gets today's date
   const formattedDate = closingDate.toLocaleDateString('en-US', {
     day: 'numeric',
@@ -246,12 +228,9 @@ export default function Fifth_SP() {
     `}
   </style>
 </div>
-
-
-      <div style={{ marginBottom: '4px',  height: '60px' }} className="top-sticky-blue-test2" id="top">
+      <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
       Benefits For Elderly
       </div>
-
       {step === "process" ? (
         <>
           <div className="main-container-5">
@@ -267,9 +246,9 @@ export default function Fifth_SP() {
   <b>
   Cover All Your Burial Costs and Unpaid Debts with This  {""}
     <span style={{ backgroundColor: "#FFC300" }}>
-    Final Allowance Benefit Worth $40,000!
+    Final Allowance Benefit—Up to $25,000
     </span>{" "}
-   
+    in Coverage!
   </b>
 </div>
 
@@ -277,7 +256,7 @@ export default function Fifth_SP() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
-              Eligible Americans are taking advantage of this opportunity to secure their $40,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
+              Eligible Americans are taking advantage of this opportunity to secure their $25,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
 <br /> <br />
 
 Simply answer the questions below and claim your benefit while you still can!
@@ -307,14 +286,14 @@ Simply answer the questions below and claim your benefit while you still can!
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
            
-            <b>Make A Quick Call </b> To Claim Your Final Allowance Benefit Worth Upto $40,000!
+          <b>Make A Quick Call</b> To Claim Your Final Allowance Benefit Worth Upto $25,000!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
-          <a href={`tel:${phoneNumber.replace(/[^0-9]/g, "")}`}>
-      <div className="call-btn" onClick={handleCall}>
-        CALL {phoneNumber}
-      </div>
-    </a>
+          <a href="tel:++13214858035">
+            <div className="call-btn" onClick={handleCall}>
+            CALL (321) 485-8035
+            </div>
+          </a>
           <div className="sub-description">
             Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
           </div>
