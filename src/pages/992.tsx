@@ -76,34 +76,33 @@ export default function Fifth_SP() {
   
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
-      // Create a function to handle the logic
+      // Function to display a random toast
       const showRandomToast = () => {
-        const randomTime = 6000;
         const randomMessage =
           messages[Math.floor(Math.random() * messages.length)];
         notify(randomMessage);
-        return randomTime;
       };
   
       // Show the first toast
-      let nextTime = showRandomToast();
+      showRandomToast();
   
-      // Set up a recurring timer
+      // Set up a recurring timer with a fixed 5-second interval
       const timer = setInterval(() => {
-        nextTime = showRandomToast();
-      }, nextTime);
+        showRandomToast();
+      }, 5000); // 5-second delay between toasts
   
       // Cleanup
       return () => {
         clearInterval(timer);
       };
-    }, 6000); // 6-second delay before the useEffect code runs
+    }, 6000); // Initial 6-second delay before starting the logic
   
     // Cleanup for the setTimeout
     return () => {
       clearTimeout(delayedEffect);
     };
   }, []);
+  
   
   
   useEffect(() => {
