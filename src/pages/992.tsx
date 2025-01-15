@@ -27,9 +27,9 @@ export default function Fifth_SP() {
   const messages = [
     "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
     "Jane L. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
-    "Sunny D. from LOS ANGELES,CA just qualified for a $40,000 Final Expense Coverage",
+    "Sunny D. from LOS ANGELES,just qualified for a $40,000 Final Expense Coverage",
     "Moody K. from Texas just qualified for a $36,000 Final Expense Coverage",
-    "Tom D. from SEATTLE,WA just qualified for a $40,000 Final Expense Coverage"
+    "Tom D. from Seattle just qualified for a $40,000 Final Expense Coverage"
   ];
   
   // Function to shuffle array in place
