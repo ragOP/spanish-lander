@@ -244,9 +244,9 @@ export default function Fifth_SP() {
 
             <div className="main-des-title-6-7">
   <b>
-  Cover All Your Burial Costs and Unpaid Debts with This  {""}
+ Cover All Your Burial Costs and Unpaid Debts with This   {""}
     <span style={{ backgroundColor: "#FFC300" }}>
-    Final Allowance Benefit—Up to $25,000
+   Final Allowance Benefit Worth $25,000!
     </span>{" "}
     in Coverage!
   </b>
