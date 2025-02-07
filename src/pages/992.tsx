@@ -248,7 +248,7 @@ export default function Fifth_SP() {
     <span style={{ backgroundColor: "#FFC300" }}>
    Final Allowance Benefit Worth $25,000!
     </span>{" "}
-    in Coverage!
+  
   </b>
 </div>
 
