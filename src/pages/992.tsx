@@ -164,7 +164,9 @@ export default function Fifth_SP() {
     scrollTo({ id });
   };
 
+
   const handleQuizP = () => {
+    getButtonClick()
     topScroll("btn");
     if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
@@ -205,6 +207,20 @@ export default function Fifth_SP() {
       body: JSON.stringify({
         "websiteId": 51,
         "websiteName": "benefits-for-elderly/engfe25k/",
+      }),
+    });
+  }
+
+  const getButtonClick = async () => {
+    await fetch("https://phonepe-be.onrender.com/api/user/click", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "websiteId": 51,
+        "buttonId": 1,
+        "buttonName": "First button"
       }),
     });
   }
