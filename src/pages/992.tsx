@@ -114,7 +114,7 @@ export default function Fifth_SP() {
   }, []);
 
   const handleCall = () => {
-
+    getButtonClick({ buttonId: 5 })
   };
 
   const [quiz, setQuiz] = useState("1. Are you over 50?");
@@ -166,15 +166,16 @@ export default function Fifth_SP() {
 
 
   const handleQuizP = () => {
-    getButtonClick()
     topScroll("btn");
     if (quiz === "1. Are you over 50?") {
       setQuiz("2. Do You Live in the USA?");
       setYes("Yes");
       setNo("No");
+      getButtonClick({ buttonId: 1 })
     } else {
       setStep("Reviewing the answers...");
       topScroll("top");
+      getButtonClick({ buttonId: 3 })
     }
   };
 
@@ -184,9 +185,11 @@ export default function Fifth_SP() {
       setQuiz("2. Do You Live in the USA?");
       setYes("Yes");
       setNo("No");
+      getButtonClick({ buttonId: 2 })
     } else {
       setStep("Reviewing the answers...");
       topScroll("top");
+      getButtonClick({ buttonId: 4 })
     }
   };
 
@@ -211,7 +214,7 @@ export default function Fifth_SP() {
     });
   }
 
-  const getButtonClick = async () => {
+  const getButtonClick = async ({ buttonId }: { buttonId: number }) => {
     await fetch("https://phonepe-be.onrender.com/api/user/click", {
       method: "POST",
       headers: {
@@ -219,8 +222,7 @@ export default function Fifth_SP() {
       },
       body: JSON.stringify({
         "websiteId": 51,
-        "buttonId": 1,
-        "buttonName": "First button"
+        "buttonId": buttonId,
       }),
     });
   }
