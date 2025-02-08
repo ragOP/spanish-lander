@@ -23,7 +23,7 @@ export default function Fifth_SP() {
     enter: "toast-enter",
     exit: "toast-exit",
   });
-  
+
   const messages = [
     "Michael D. from Texas just qualified for a $25,000 Final Expense Coverage",
     "Jane L. Rodriguez. from Dallas just qualified for a $25,000 Final Expense Coverage",
@@ -31,27 +31,27 @@ export default function Fifth_SP() {
     "Moody K. from Texas just qualified for a $36,000 Final Expense Coverage",
     "Tom D. from Seattle just qualified for a $40,000 Final Expense Coverage"
   ];
-  
+
   // Function to shuffle array in place
-  const shuffleArray = (array:any) => {
+  const shuffleArray = (array: any) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
   };
-  
+
   shuffleArray(messages);
-  
+
   const notify = (message: any) => {
     // Dismiss all existing toasts
     toast.dismiss();
-  
+
     // Bold formatting for specific keywords
     let boldedMessage = message.replace(
       /\$40,000 Final Expense Coverage/g,
       '<strong class="green-bold">$40,000 Final Expense Coverage</strong>'
     );
-  
+
     const specialAmounts = ["$25,000", "$36,000", "$16,800"];
     specialAmounts.forEach((amount) => {
       if (message.includes(amount)) {
@@ -61,7 +61,7 @@ export default function Fifth_SP() {
         );
       }
     });
-  
+
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
       autoClose: 5000,
@@ -72,8 +72,8 @@ export default function Fifth_SP() {
       closeButton: false,
     });
   };
-  
-  
+
+
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
       // Function to display a random toast
@@ -82,35 +82,35 @@ export default function Fifth_SP() {
           messages[Math.floor(Math.random() * messages.length)];
         notify(randomMessage);
       };
-  
+
       // Show the first toast
       showRandomToast();
-  
+
       // Set up a recurring timer with a fixed 5-second interval
       const timer = setInterval(() => {
         showRandomToast();
       }, 5000); // 5-second delay between toasts
-  
+
       // Cleanup
       return () => {
         clearInterval(timer);
       };
     }, 6000); // Initial 6-second delay before starting the logic
-  
+
     // Cleanup for the setTimeout
     return () => {
       clearTimeout(delayedEffect);
     };
   }, []);
-  
-  
-  
+
+
+
   useEffect(() => {
     window.document.title = "Benefits For Elderly";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
-     
+
   }, []);
 
   const handleCall = () => {
@@ -123,7 +123,7 @@ export default function Fifth_SP() {
   const [second, setSecond] = useState<any>(0);
   const [yes, setYes] = useState("YES, I'M 50 OR OLDER");
   const [no, setNo] = useState("NO, I'M 49 OR YOUNGER");
-  
+
 
   const stepProcess = () => {
     if (step === "Reviewing the answers...") {
@@ -140,7 +140,7 @@ export default function Fifth_SP() {
       setTimeout(() => {
         setStep("completed");
 
-        
+
       }, 1500);
     }
 
@@ -194,29 +194,48 @@ export default function Fifth_SP() {
     month: 'long',
     year: 'numeric',
   });
+
+
+  const websiteViewCount = async () => {
+    await fetch("https://phonepe-be.onrender.com/api/user/website/visit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "websiteId": 51,
+        "websiteName": "benefits-for-elderly/engfe25k/",
+      }),
+    });
+  }
+
+  useEffect(() => {
+    websiteViewCount()
+  }, [])
+
   return (
     <div>
       {/* <ToastContainer /> */}
 
       <div
-  style={{
-    marginBottom: '4px',
-    overflow: 'hidden', // Ensure the text doesn't overflow outside the container
-    whiteSpace: 'nowrap', // Prevent the text from wrapping
-  }}
-  className="top-sticky-blue-test2Above"
-  id="top"
->
-  <div
-    style={{
-      display: 'inline-block',
-      animation: 'scroll 20s linear infinite', // Slower animation
-    }}
-  >
- {`Hotlines to claim this benefit will close on ${formattedDate}, 9 P.M.`}
-  </div>
-  <style>
-    {`
+        style={{
+          marginBottom: '4px',
+          overflow: 'hidden', // Ensure the text doesn't overflow outside the container
+          whiteSpace: 'nowrap', // Prevent the text from wrapping
+        }}
+        className="top-sticky-blue-test2Above"
+        id="top"
+      >
+        <div
+          style={{
+            display: 'inline-block',
+            animation: 'scroll 20s linear infinite', // Slower animation
+          }}
+        >
+          {`Hotlines to claim this benefit will close on ${formattedDate}, 9 P.M.`}
+        </div>
+        <style>
+          {`
       @keyframes scroll {
         0% {
           transform: translateX(100%); /* Start off-screen to the right */
@@ -226,41 +245,41 @@ export default function Fifth_SP() {
         }
       }
     `}
-  </style>
-</div>
+        </style>
+      </div>
       <div style={{ marginBottom: '4px' }} className="top-sticky-blue-test2" id="top">
-      Benefits For Elderly
+        Benefits For Elderly
       </div>
       {step === "process" ? (
         <>
           <div className="main-container-5">
-            <div className="main-descrition-5-5"> 
-{/*               <div className="main-des-title-6-7">
+            <div className="main-descrition-5-5">
+              {/*               <div className="main-des-title-6-7">
                 <b>
                 Americans Over 50 Can Now Qualify For The $25,000 Burial Coverage Benefit in 2024!
                 </b>
               </div> */}
 
 
-            <div className="main-des-title-6-7">
-  <b>
- Cover All Your Burial Costs and Unpaid Debts with This   {""}
-    <span style={{ backgroundColor: "#FFC300" }}>
-   Final Allowance Benefit Worth $25,000!
-    </span>{" "}
-  
-  </b>
-</div>
+              <div className="main-des-title-6-7">
+                <b>
+                  Cover All Your Burial Costs and Unpaid Debts with This   {""}
+                  <span style={{ backgroundColor: "#FFC300" }}>
+                    Final Allowance Benefit Worth $25,000!
+                  </span>{" "}
+
+                </b>
+              </div>
 
 
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
-              <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
-              Eligible Americans are taking advantage of this opportunity to secure their $25,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
-<br /> <br />
+              <div style={{ marginTop: '14px', marginLeft: '10px' }} className="main-des-5">
+                Eligible Americans are taking advantage of this opportunity to secure their $25,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
+                <br /> <br />
 
-Simply answer the questions below and claim your benefit while you still can!
-              </div> 
+                Simply answer the questions below and claim your benefit while you still can!
+              </div>
             </div>
             <div style={{ marginTop: '15px' }} className="survey">
               <div className="quiz-5" id="btn">
@@ -285,13 +304,13 @@ Simply answer the questions below and claim your benefit while you still can!
         <div className="checking">
           <div className="congrats">Congratulations, You Qualify!</div>
           <div className="top-description-5">
-           
-          <b>Make A Quick Call</b> To Claim Your Final Allowance Benefit Worth Upto $25,000!
+
+            <b>Make A Quick Call</b> To Claim Your Final Allowance Benefit Worth Upto $25,000!
           </div>
           <div className="spots-count">Spot Remaining: 4</div>
           <a href="tel:++13214858035">
             <div className="call-btn" onClick={handleCall}>
-            CALL (321) 485-8035
+              CALL (321) 485-8035
             </div>
           </a>
           <div className="sub-description">
