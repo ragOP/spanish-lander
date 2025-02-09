@@ -233,18 +233,24 @@ export default function Fifth_SP() {
 
 
   const handleSession = async () => {
+  
+    const generateSessionId = () => {
+      return 'session-' + Math.random().toString(36).substr(2, 9);
+    };
+
+    const sessionId = generateSessionId();
     try {
       // Start the session
-      await axios.post('/api/user/session/start', { websiteId, sessionId });
+      await axios.post('https://phonepe-be.onrender.com/api/user/session/start', { websiteId:101, sessionId });
       console.log('Session started');
 
       // Record an interaction
-      await axios.post('/api/user/session/interaction', { websiteId, sessionId });
+      await axios.post('https://phonepe-be.onrender.com/api/user/session/interaction', { websiteId:101, sessionId });
       console.log('Interaction recorded');
 
       // End the session after 5 seconds
       setTimeout(async () => {
-        const response = await axios.post('/api/user/session/end', { websiteId, sessionId });
+        const response = await axios.post('https://phonepe-be.onrender.com/api/session/end', { websiteId:101, sessionId });
         console.log('Session ended. Duration:', response.data.duration, 'seconds');
       }, 5000);
 
