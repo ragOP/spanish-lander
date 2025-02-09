@@ -239,6 +239,11 @@ export default function Fifth_SP() {
     };
 
     const sessionId = generateSessionId();
+    async function endSession() {
+      const response = await axios.post('https://phonepe-be.onrender.com/api/user/session/end', { websiteId: 101, sessionId });
+      console.log('Session ended. Duration:', response.data.duration, 'seconds');
+    }
+
     try {
       // Start the session
       await axios.post('https://phonepe-be.onrender.com/api/user/session/start', { websiteId:101, sessionId });
@@ -249,10 +254,14 @@ export default function Fifth_SP() {
       console.log('Interaction recorded');
 
       // End the session after 5 seconds
-      setTimeout(async () => {
-        const response = await axios.post('https://phonepe-be.onrender.com/api/session/end', { websiteId:101, sessionId });
-        console.log('Session ended. Duration:', response.data.duration, 'seconds');
-      }, 5000);
+      window.addEventListener('beforeunload', endSession);
+
+      setTimeout(endSession, 5000);
+
+      return () => {
+        endSession();
+        window.removeEventListener('beforeunload', endSession);
+      };
 
     } catch (error) {
       console.error('Error:', error);
