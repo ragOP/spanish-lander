@@ -231,6 +231,31 @@ export default function Fifth_SP() {
     websiteViewCount()
   }, [])
 
+
+  const handleSession = async () => {
+    try {
+      // Start the session
+      await axios.post('/api/user/session/start', { websiteId, sessionId });
+      console.log('Session started');
+
+      // Record an interaction
+      await axios.post('/api/user/session/interaction', { websiteId, sessionId });
+      console.log('Interaction recorded');
+
+      // End the session after 5 seconds
+      setTimeout(async () => {
+        const response = await axios.post('/api/user/session/end', { websiteId, sessionId });
+        console.log('Session ended. Duration:', response.data.duration, 'seconds');
+      }, 5000);
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  useEffect(() => {
+    handleSession();
+  }, []);
   return (
     <div>
       {/* <ToastContainer /> */}
