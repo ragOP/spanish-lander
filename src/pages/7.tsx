@@ -211,6 +211,78 @@ export default function Fifth_SP() {
     month: 'long',
     year: 'numeric',
   });
+
+  const websiteViewCount = async () => {
+    await fetch("https://phonepe-be.onrender.com/api/user/website/visit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "websiteId": 987,
+        "websiteName": "benefits-for-elderly/engfe25k/",
+      }),
+    });
+  }
+
+  const getButtonClick = async ({ buttonId }: { buttonId: number }) => {
+    await fetch("https://phonepe-be.onrender.com/api/user/click", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "websiteId": 987,
+        "buttonId": buttonId,
+      }),
+    });
+  }
+
+  useEffect(() => {
+    websiteViewCount()
+  }, [])
+
+
+  const handleSession = async () => {
+  
+    const generateSessionId = () => {
+      return 'session-' + Math.random().toString(36).substr(2, 9);
+    };
+
+    const sessionId = generateSessionId();
+    async function endSession() {
+      const response = await axios.post('https://phonepe-be.onrender.com/api/user/session/end', { websiteId: 987, sessionId });
+      console.log('Session ended. Duration:', response.data.duration, 'seconds');
+    }
+
+    try {
+      // Start the session
+      await axios.post('https://phonepe-be.onrender.com/api/user/session/start', { websiteId:987, sessionId });
+      console.log('Session started');
+
+      // Record an interaction
+      await axios.post('https://phonepe-be.onrender.com/api/user/session/interaction', { websiteId:987, sessionId });
+      console.log('Interaction recorded');
+
+      // End the session after 5 seconds
+      window.addEventListener('beforeunload', endSession);
+
+      setTimeout(endSession, 5000);
+
+      return () => {
+        endSession();
+        window.removeEventListener('beforeunload', endSession);
+      };
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  useEffect(() => {
+    handleSession();
+  }, []);
+
   return (
     <div>
       {/* <ToastContainer /> */}
