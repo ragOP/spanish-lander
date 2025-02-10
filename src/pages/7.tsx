@@ -132,7 +132,7 @@ export default function Fifth_SP() {
   }, []);
 
   const handleCall = () => {
-
+    getButtonClick({ buttonId: 5 })
   };
 
   const [quiz, setQuiz] = useState("1. Are you over 50?");
@@ -188,9 +188,11 @@ export default function Fifth_SP() {
       setQuiz("2. Do You Live in the USA?");
       setYes("Yes");
       setNo("No");
+      getButtonClick({ buttonId: 1 })
     } else {
       setStep("Reviewing the answers...");
       topScroll("top");
+      getButtonClick({ buttonId: 3 })
     }
   };
 
@@ -200,9 +202,11 @@ export default function Fifth_SP() {
       setQuiz("2. Do You Live in the USA?");
       setYes("Yes");
       setNo("No");
+      getButtonClick({ buttonId: 2 })
     } else {
       setStep("Reviewing the answers...");
       topScroll("top");
+      getButtonClick({ buttonId: 4 })
     }
   };
   const closingDate = new Date(); // Gets today's date
