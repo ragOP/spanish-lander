@@ -381,16 +381,16 @@ Simplemente responde las preguntas a continuación para reclamar tu beneficio an
         <div className="checking">
           <div className="congrats">¡Felicidades, Usted Califica!</div>
           <div className="top-description-5">
-            <b>Haga una llamada rápida</b> para reclamar su beneficio de asignación final por valor de hasta $40,000!
+          Sólo haz una breve llamada para Reclamar tus Beneficios de Gastos Finales de hasta $40,000!
           </div>
-          <div className="spots-count">Espacios Restantes: 4</div>
+          <div className="spots-count">Cupos Disponibles: 4</div>
           <a href="tel:+18666434680">
       <div className="call-btn" onClick={handleCall}>
-        CALL  186 6643 4680
+      Llama al: 186 6643 4680
       </div>
     </a>
           <div className="sub-description">
-            Debido al alto volumen de llamadas, su agente oficial solo esperará 3 minutos, luego su lugar no estará reservado.
+          Debido al alto volumen de llamadas tu cupo sólo podrá ser guardado por sólo 3 minutos, llama Ahora!
           </div>
           <div className="timer">
             <div className="timer-cell">{min}</div>
