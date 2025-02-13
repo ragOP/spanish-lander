@@ -340,9 +340,9 @@ export default function Fifth_SP() {
 
             <div className="main-des-title-6-7">
 <b>
-Cubra todos sus costos de entierro y deudas impagas con este {""}
+Cubre Todos Tus Gastos Fúnebres y Deja Tus Deudas Pagas con este {""}
     <span style={{ backgroundColor: "#FFC300" }}>
-    Beneficio de Asignación Final por valor de $40,000!
+    Subsidio de $40,000 
     </span>{" "}
 </b>
 </div>
