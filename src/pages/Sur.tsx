@@ -135,11 +135,11 @@ export default function Fifth_SP() {
     getButtonClick({ buttonId: 5 })
   };
 
-  const [quiz, setQuiz] = useState("1. Are you over 50?");
+  const [quiz, setQuiz] = useState("1. Eres Mayor de 50 Años?");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes, setYes] = useState("YES, I'M 50 OR OLDER");
+  const [Si, setSi] = useState("Si, I'M 50 OR OLDER");
   const [no, setNo] = useState("NO, I'M 49 OR YOUNGER");
   
 
@@ -184,9 +184,9 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 50?") {
+    if (quiz === "1. Eres Mayor de 50 Años?") {
       setQuiz("2. Do You Live in the USA?");
-      setYes("Yes");
+      setSi("Si");
       setNo("No");
       getButtonClick({ buttonId: 1 })
     } else {
@@ -198,9 +198,9 @@ export default function Fifth_SP() {
 
   const handleQuizN = () => {
     topScroll("btn");
-    if (quiz === "1. Are you over 50?") {
+    if (quiz === "1. Eres Mayor de 50 Años?") {
       setQuiz("2. Do You Live in the USA?");
-      setYes("Yes");
+      setSi("Si");
       setNo("No");
       getButtonClick({ buttonId: 2 })
     } else {
@@ -363,7 +363,7 @@ Simplemente responde las preguntas a continuación para reclamar tu beneficio an
               </div>
               <div className="answer">
                 <div className="answer-btn-5" onClick={handleQuizP}>
-                  {yes}
+                  {Si}
                 </div>
                 <div className="answer-btn-5" onClick={handleQuizN}>
                   {no}
