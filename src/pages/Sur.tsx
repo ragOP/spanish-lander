@@ -339,23 +339,22 @@ export default function Fifth_SP() {
 
 
             <div className="main-des-title-6-7">
-  <b>
-  Cover All Your Burial Costs and Unpaid Debts with This  {""}
+<b>
+Cubra todos sus costos de entierro y deudas impagas con este {""}
     <span style={{ backgroundColor: "#FFC300" }}>
-    Final Allowance Benefit Worth $40,000!
+    Beneficio de Asignación Final por valor de $40,000!
     </span>{" "}
-   
-  </b>
+</b>
 </div>
 
 
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
-              Eligible Americans are taking advantage of this opportunity to secure their $40,000 in Final Allowance Benefit, which covers all of their Burial Costs and Unpaid Debts!
+              Los estadounidenses elegibles están aprovechando esta oportunidad para asegurar su Beneficio de Asignación Final de $40,000, que cubre todos sus costos de entierro y deudas impagas!
 <br /> <br />
 
-Simply answer the questions below and claim your benefit while you still can!
+¡Simplemente responda las preguntas a continuación y reclame su beneficio mientras aún pueda!
               </div> 
             </div>
             <div style={{ marginTop: '15px' }} className="survey">
@@ -379,19 +378,18 @@ Simply answer the questions below and claim your benefit while you still can!
         </div>
       ) : (
         <div className="checking">
-          <div className="congrats">Congratulations, You Qualify!</div>
+          <div className="congrats">¡Felicidades, Usted Califica!</div>
           <div className="top-description-5">
-           
-            <b>Make A Quick Call </b> To Claim Your Final Allowance Benefit Worth Upto $40,000!
+            <b>Haga una llamada rápida</b> para reclamar su beneficio de asignación final por valor de hasta $40,000!
           </div>
-          <div className="spots-count">Spot Remaining: 4</div>
+          <div className="spots-count">Espacios Restantes: 4</div>
           <a href={`tel:${phoneNumber.replace(/[^0-9]/g, "")}`}>
       <div className="call-btn" onClick={handleCall}>
         CALL {phoneNumber}
       </div>
     </a>
           <div className="sub-description">
-            Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.
+            Debido al alto volumen de llamadas, su agente oficial solo esperará 3 minutos, luego su lugar no estará reservado.
           </div>
           <div className="timer">
             <div className="timer-cell">{min}</div>
