@@ -34,6 +34,7 @@ import Chat from './pages/Chat'
 import SE from './pages/992'
 import Chat2 from './pages/Chat2'
 import Test2 from './pages/Test2'
+import Sur from './pages/Sur'
 function App() {
  console.log('s');
   return (
@@ -54,6 +55,7 @@ function App() {
              <Route path = "/fefb1" element = {<Newp />} />
              <Route path = "/bf1" element = {<Km />} />
              <Route path = "/km-engfe1" element = {<Hell />} />
+             <Route path = "/spanfe1" element = {<Sur />} />
           
           {/* <Route path = "/a" element = {<S />} /> */}
 
