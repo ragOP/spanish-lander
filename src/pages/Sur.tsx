@@ -386,7 +386,7 @@ Simplemente responde las preguntas a continuación para reclamar tu beneficio an
           <div className="spots-count">Cupos Disponibles: 4</div>
           <a href="tel:+18666434680">
       <div className="call-btn" onClick={handleCall}>
-      Llama al: 186 6643 4680
+      Llama al: 1-(866)-643-4680
       </div>
     </a>
           <div className="sub-description">
