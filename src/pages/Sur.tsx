@@ -120,8 +120,8 @@ export default function Fifth_SP() {
     
     }
     else{
-        // +1614 265   8802
-      setPhoneNumber("1614-265-8802");
+        
+      setPhoneNumber("314-234-1234");
     }
   }, []);
   useEffect(() => {
@@ -384,9 +384,9 @@ Simplemente responde las preguntas a continuación para reclamar tu beneficio an
             <b>Haga una llamada rápida</b> para reclamar su beneficio de asignación final por valor de hasta $40,000!
           </div>
           <div className="spots-count">Espacios Restantes: 4</div>
-          <a href={`tel:${phoneNumber.replace(/[^0-9]/g, "")}`}>
+          <a href="tel:+18666434680">
       <div className="call-btn" onClick={handleCall}>
-        CALL {phoneNumber}
+        CALL  186 6643 4680
       </div>
     </a>
           <div className="sub-description">
