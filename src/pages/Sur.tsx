@@ -120,7 +120,8 @@ export default function Fifth_SP() {
     
     }
     else{
-      setPhoneNumber("314-234-1234");
+        // +1614 265   8802
+      setPhoneNumber("1614-265-8802");
     }
   }, []);
   useEffect(() => {
@@ -185,7 +186,7 @@ export default function Fifth_SP() {
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "1. Eres Mayor de 50 Años?") {
-      setQuiz("2. Do You Live in the USA?");
+      setQuiz("2. Vives actualmente en Estados Unidos?");
       setSi("Si");
       setNo("No");
       getButtonClick({ buttonId: 1 })
@@ -199,7 +200,7 @@ export default function Fifth_SP() {
   const handleQuizN = () => {
     topScroll("btn");
     if (quiz === "1. Eres Mayor de 50 Años?") {
-      setQuiz("2. Do You Live in the USA?");
+      setQuiz("2. Vives actualmente en Estados Unidos?");
       setSi("Si");
       setNo("No");
       getButtonClick({ buttonId: 2 })
