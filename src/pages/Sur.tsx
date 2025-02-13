@@ -351,10 +351,10 @@ Cubra todos sus costos de entierro y deudas impagas con este {""}
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div style={{ marginTop: '14px',marginLeft:'10px' }} className="main-des-5">
-              Los estadounidenses elegibles están aprovechando esta oportunidad para asegurar su Beneficio de Asignación Final de $40,000, que cubre todos sus costos de entierro y deudas impagas!
+              Todas las Personas Elegibles para este Programa están aprovechando esta increíble Oportunidad de recibir sus $40,000 en beneficios para Gastos Finales, los cuales podrán ayudarte a cubrir tus Gastos Fúnebres, y cualquier deuda que aun tengas por pagar!
 <br /> <br />
 
-¡Simplemente responda las preguntas a continuación y reclame su beneficio mientras aún pueda!
+Simplemente responde las preguntas a continuación para reclamar tu beneficio antes de que el tiempo se acabe!
               </div> 
             </div>
             <div style={{ marginTop: '15px' }} className="survey">
